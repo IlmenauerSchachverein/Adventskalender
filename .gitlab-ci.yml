@@ -1,0 +1,42 @@
+stages:
+  - build
+  - deploy
+
+# Job zum Abrufen des Repository-Codes und Bauen der Hugo-Seite
+build:
+  stage: build
+  image: archlinux:latest
+  before_script:
+    - pacman -Syu --noconfirm git go hugo python git-lfs
+    - git lfs install
+  script:
+    - hugo mod get
+    - hugo mod tidy
+    - hugo --gc --minify --enableGitInfo
+  artifacts:
+    paths:
+      - public/
+    expire_in: 1 week
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+# Job zum Bereitstellen der Dateien via SCP mit SSH-Key
+deploy:
+  stage: deploy
+  image: archlinux:latest
+  before_script:
+    - |
+      pacman -Syu --noconfirm openssh
+      eval "$(ssh-agent -s)"  # SSH-Agent starten
+      echo "$SSHKEY" | tr -d '\r' | ssh-add -  # SSH-Schlüssel laden
+      ssh-add -l || echo "Fehler: SSH-Schlüssel konnte nicht hinzugefügt werden"
+      mkdir -p ~/.ssh  # SSH-Host Key hinzufügen
+      ssh-keyscan -H "$SSHSERVER" > ~/.ssh/known_hosts
+  script:
+    - |
+      ssh -o StrictHostKeyChecking=no "webuser@$SSHSERVER" "rm -rf /var/www/adventskalender/*"
+      ssh -o StrictHostKeyChecking=no "webuser@$SSHSERVER" "mkdir -p /var/www/adventskalender"
+      scp -r public/* "webuser@$SSHSERVER:/var/www/adventskalender/"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
