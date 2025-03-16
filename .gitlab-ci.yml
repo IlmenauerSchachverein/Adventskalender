@@ -32,7 +32,12 @@ deploy:
       echo "$isvssh" | tr -d '\r' | ssh-add -  # SSH-Schlüssel laden
       ssh-add -l || echo "Fehler: SSH-Schlüssel konnte nicht hinzugefügt werden"
       mkdir -p ~/.ssh  # SSH-Host Key hinzufügen
-      ssh-keyscan -H "$isvssh" > ~/.ssh/known_hosts
+      if [ -n "$isvssh" ]; then
+          ssh-keyscan -H "$isvssh" >> ~/.ssh/known_hosts
+      else
+          echo "Fehler: Die Variable \$isvssh ist nicht gesetzt!" >&2
+          exit 1
+      fi
   script:
     - |
       ssh -o StrictHostKeyChecking=no "webuser@$isvssh" "rm -rf /var/www/adventskalender/*"
