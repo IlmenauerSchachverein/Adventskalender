@@ -21,7 +21,7 @@ build:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
     - if: '$CI_COMMIT_BRANCH == "main"'
 
-#  Job zum Bereitstellen der Dateien via SSH mit Passwort
+# Job zum Bereitstellen der Dateien via SSH mit Passwort-Login
 deploy:
   stage: deploy
   image: archlinux:latest
@@ -30,9 +30,9 @@ deploy:
   script:
     - |
       echo "Entferne alte Dateien auf dem Server..."
-      sshpass -p "$isvpass" ssh -o StrictHostKeyChecking=no "webuser@$DEPLOY_HOST" "rm -rf /var/www/adventskalender/*"
+      sshpass -p "$isvpass" ssh -o StrictHostKeyChecking=no "webuser@$isvip" "rm -rf /var/www/adventskalender/*"
 
       echo "Lade neue Dateien hoch..."
-      sshpass -p "$isvpass" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$DEPLOY_HOST:/var/www/adventskalender/"
+      sshpass -p "$isvpass" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$isvip:/var/www/adventskalender/"
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
