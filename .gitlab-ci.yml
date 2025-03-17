@@ -21,22 +21,18 @@ build:
     - if: '$CI_PIPELINE_SOURCE == "schedule"'
     - if: '$CI_COMMIT_BRANCH == "main"'
 
-# Job zum Bereitstellen der Dateien via SCP mit SSH-Key
+#  Job zum Bereitstellen der Dateien via SSH mit Passwort
 deploy:
   stage: deploy
   image: archlinux:latest
   before_script:
-    - |
-      pacman -Syu --noconfirm openssh
-      eval "$(ssh-agent -s)"  # SSH-Agent starten
-      echo "$isvssh" | tr -d '\r' | ssh-add -  # SSH-Schlüssel laden
-      ssh-add -l || echo "Fehler: SSH-Schlüssel konnte nicht hinzugefügt werden"
-      mkdir -p ~/.ssh  # SSH-Host Key hinzufügen
-      ssh-keyscan -H "$isvssh" > ~/.ssh/known_hosts
+    - pacman -Syu --noconfirm openssh sshpass rsync
   script:
     - |
-      ssh -o StrictHostKeyChecking=no "webuser@$isvssh" "rm -rf /var/www/adventskalender/*"
-      ssh -o StrictHostKeyChecking=no "webuser@$isvssh" "mkdir -p /var/www/adventskalender"
-      scp -r public/* "webuser@$isvssh:/var/www/adventskalender/"
+      echo "Entferne alte Dateien auf dem Server..."
+      sshpass -p "$isvpass" ssh -o StrictHostKeyChecking=no "webuser@$DEPLOY_HOST" "rm -rf /var/www/adventskalender/*"
+
+      echo "Lade neue Dateien hoch..."
+      sshpass -p "$isvpass" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$DEPLOY_HOST:/var/www/adventskalender/"
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
