@@ -35,4 +35,4 @@ deploy:
       echo "Lade neue Dateien hoch..."
       sshpass -p "$isvpass" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$isvip:/var/www/adventskalender/"
   rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_COMMIT_BRANCH == "main"' 
