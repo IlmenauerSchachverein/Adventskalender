@@ -30,9 +30,9 @@ deploy:
   script:
     - |
       echo "Entferne alte Dateien auf dem Server..."
-      sshpass -p "$isvpass" ssh -o StrictHostKeyChecking=no "webuser@$isvip" "rm -rf /var/www/adventskalender/*"
+      sshpass -p "$SSHPW" ssh -o StrictHostKeyChecking=no "webuser@$SSHSERVER" "rm -rf /var/www/adventskalender/*"
 
       echo "Lade neue Dateien hoch..."
-      sshpass -p "$isvpass" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$isvip:/var/www/adventskalender/"
+      sshpass -p "$SSHPW" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$SSHSERVER:/var/www/adventskalender/"
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"' 
