@@ -46,7 +46,7 @@ defaultContentLanguage = 'de'
   [[menu.main]]
   name = "Gitlab"
   weight = 6
-  url = "https://gitlab.ilmenauer-schachverein.de/kalender/adventskalender"
+  url = "https://github.com/IlmenauerSchachverein/Adventskalender"
   [menu.main.params]
   icon = "github"
 
@@ -56,10 +56,6 @@ defaultContentLanguage = 'de'
   url = "https://instagram.com/ilmenauer_schachverein"
   [menu.main.params]
   icon = "instagram"
-
-[services]
-  [services.googleAnalytics]
-  ID = "G-8SSMSSGT1Q"
 
 [params]
   disableToc = true
