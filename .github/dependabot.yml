@@ -1,0 +1,13 @@
+version: 2
+updates:
+# GitHub Actions – z. B. setup-go, actions/checkout etc.
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "weekly"
+
+# Go-Module für Hugo Themes oder eigene Erweiterungen
+- package-ecosystem: "gomod"
+  directory: "/"
+  schedule:
+    interval: "weekly"
