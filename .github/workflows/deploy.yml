@@ -1,0 +1,94 @@
+name: Build and Deploy Hugo + Mirror to GitLab
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 3 * * *" # täglich 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Hugo & LFS
+        run: |
+          sudo apt update
+          sudo apt install -y git-lfs hugo
+          git lfs install
+
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Build Hugo Site
+        run: |
+          hugo mod get
+          hugo mod tidy
+          hugo --gc --minify --enableGitInfo
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: public
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: public
+          path: public/
+
+      - name: Install SSH tools
+        run: |
+          sudo apt update
+          sudo apt install -y sshpass openssh-client rsync
+
+      - name: Deploy via rsync + sshpass
+        env:
+          SSHPW: ${{ secrets.SSHPW }}
+          SSHSERVER: ${{ secrets.SSHSERVER }}
+        run: |
+          echo "Entferne alte Dateien auf dem Server..."
+          sshpass -p "$SSHPW" ssh -o StrictHostKeyChecking=no "webuser@$SSHSERVER" "rm -rf /var/www/adventskalender/*"
+
+          echo "Lade neue Dateien hoch..."
+          sshpass -p "$SSHPW" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "webuser@$SSHSERVER:/var/www/adventskalender/"
+
+  mirror:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Git LFS
+        run: |
+          sudo apt update
+          sudo apt install -y git-lfs
+          git lfs install
+
+      - name: Set Git identity
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "info@ilmenauer-schachverein.de"
+
+      - name: Push mirror to GitLab
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+        run: |
+          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.erik-skopp.de/ilmenauerschachverein/adventskalender.git
+          git push --mirror gitlab
+          git lfs push gitlab --all
