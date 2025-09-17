@@ -57,21 +57,22 @@ jobs:
           name: public
           path: public/
 
-      - name: Install SSH tools
+      - name: Install lftp
         run: |
           sudo apt update
-          sudo apt install -y sshpass openssh-client rsync
+          sudo apt install -y lftp
 
-      - name: Deploy via rsync + sshpass
+      - name: Upload via SFTP mirror (webuser)
         env:
           SSHPW: ${{ secrets.SSHPW }}
           SSHSERVER: ${{ secrets.SSHSERVER }}
         run: |
-          echo "Entferne alte Dateien auf dem Server..."
-          sshpass -p "$SSHPW" ssh -o StrictHostKeyChecking=no "root@$SSHSERVER" "rm -rf /var/www/adventskalender/*"
-
-          echo "Lade neue Dateien hoch..."
-          sshpass -p "$SSHPW" rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" public/ "root@$SSHSERVER:/var/www/adventskalender/"
+          lftp -u webuser,"$SSHPW" sftp://$SSHSERVER -e "\
+            set sftp:auto-confirm yes; \
+            set net:max-retries 2; \
+            set net:timeout 30; \
+            mirror --reverse --delete --verbose --only-newer --parallel=4 public /adventskalender.ilmenauer-schachverein.de; \
+            bye"
 
   mirror:
     needs: build
