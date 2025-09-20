@@ -6,6 +6,15 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  SSHSERVER: ${{ secrets.SSHSERVER }}
+  SSHPW: ${{ secrets.SSHPW }}
+  GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+
+concurrency:
+  group: adventskalender-deploy
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -55,7 +64,7 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: public
-          path: public/
+          path: public
 
       - name: Install lftp
         run: |
@@ -63,19 +72,18 @@ jobs:
           sudo apt install -y lftp
 
       - name: Upload via SFTP mirror (webuser)
-        env:
-          SSHPW: ${{ secrets.SSHPW }}
-          SSHSERVER: ${{ secrets.SSHSERVER }}
         run: |
-          lftp -u webuser,"$SSHPW" sftp://$SSHSERVER -e "\
-            set sftp:auto-confirm yes; \
-            set net:max-retries 2; \
-            set net:timeout 30; \
-            mirror --reverse --delete --verbose --only-newer --parallel=4 public /adventskalender.ilmenauer-schachverein.de; \
-            bye"
+          lftp -u webuser,"$SSHPW" "sftp://$SSHSERVER" -e '
+            set sftp:auto-confirm yes;
+            set net:max-retries 2;
+            set net:timeout 30;
+            mkdir -p /var/www/adventskalender.ilmenauer-schachverein.de;
+            mirror --reverse --delete --verbose --only-newer --parallel=4 public /var/www/adventskalender.ilmenauer-schachverein.de;
+            bye
+          '
 
   mirror:
-    needs: build
+    needs: deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -96,10 +104,8 @@ jobs:
           git config --global user.email "info@ilmenauer-schachverein.de"
 
       - name: Push mirror to GitLab
-        env:
-          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
         run: |
-          git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.erik-skopp.de/ilmenauerschachverein/adventskalender.git
+          git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@gitlab.erik-skopp.de/ilmenauerschachverein/adventskalender.git"
           git push gitlab --all
           git push gitlab --tags
           git lfs push gitlab --all
