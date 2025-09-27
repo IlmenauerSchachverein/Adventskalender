@@ -70,7 +70,7 @@ googleAnalytics = "G-6WR8GVTX41"
   displayPoweredBy = false
 
   [params.editURL]
-  enable = false
+  enable = false 
 
   [params.page]
   width = "full"
