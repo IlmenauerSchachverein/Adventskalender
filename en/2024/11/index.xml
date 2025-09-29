@@ -1,0 +1,5 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Advent of Chess – Day 11 - Retractor</title><link>https://adventskalender.ilmenauer-schachverein.de/en/2024/11/</link><description>Recent content in Day 11 - Retractor on Advent of Chess</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://adventskalender.ilmenauer-schachverein.de/en/2024/11/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 11 - Solution</title><link>https://adventskalender.ilmenauer-schachverein.de/en/2024/11/solution/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adventskalender.ilmenauer-schachverein.de/en/2024/11/solution/</guid><description>
+&lt;ul>
+&lt;li>We first retract dxRe8=Q, and then e2-e1=B.&lt;/li>
+&lt;li>Then, we play forward 1. e1=R dxc8=N#&lt;/li>
+&lt;/ul></description></item></channel></rss>

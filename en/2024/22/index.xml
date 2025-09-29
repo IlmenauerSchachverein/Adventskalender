@@ -1,0 +1,13 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Advent of Chess – Day 22 - Retrograde</title><link>https://adventskalender.ilmenauer-schachverein.de/en/2024/22/</link><description>Recent content in Day 22 - Retrograde on Advent of Chess</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://adventskalender.ilmenauer-schachverein.de/en/2024/22/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 22 - Solution</title><link>https://adventskalender.ilmenauer-schachverein.de/en/2024/22/solution/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adventskalender.ilmenauer-schachverein.de/en/2024/22/solution/</guid><description>
+&lt;p>Given the kings&amp;rsquo; position, whoever can castle must be Black.&lt;/p>
+&lt;p>Assume Red is White (thus Blue can castle). The last move by Blue (a.k.a. Black) must have been h7-h6, but what was the move before that? It must have been with a piece that is no longer on the board. It cannot have been with the blue knight that was captured on b3 as Red needs 2 retractions (plus the check retraction) before that knight can appear on the board. Therefore, the second last move by Black must have been with the missing rook and the last moves must have been (in reverse order): Ng8-f6+, h7-h6, Nh6xRg8, Rh8-g8. However, the fact that the missing rook was captured on g8 means the position has &amp;ldquo;the wrong parity&amp;rdquo;. Indeed, it can be shown that both players made an even number of moves to reach the diagram position, so it should be Red to move (since Red started the game), but Blue is in check!&lt;/p>
+&lt;p>We conclude Red cannot be White, thus Blue must be White. It is not hard to see that the position has no legality issues in that case.&lt;/p>
+&lt;!--
+&lt;br>
+&lt;br>
+&lt;iframe
+style="width: 100%; height: 80vh;"
+src="https://lichess.org/study/embed/PrONOirR/uj3Wrzet"
+frameborder="0">
+&lt;/iframe>
+--></description></item></channel></rss>

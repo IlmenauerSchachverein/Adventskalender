@@ -1,0 +1,14 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Advent of Chess – Day 20 - Placement mate</title><link>https://adventskalender.ilmenauer-schachverein.de/en/2024/20/</link><description>Recent content in Day 20 - Placement mate on Advent of Chess</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://adventskalender.ilmenauer-schachverein.de/en/2024/20/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 20 - Solution</title><link>https://adventskalender.ilmenauer-schachverein.de/en/2024/20/solution/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adventskalender.ilmenauer-schachverein.de/en/2024/20/solution/</guid><description>
+&lt;ul>
+&lt;li>black King on h1 -&amp;gt; 1.Kc1 b3 2. Qd1&lt;/li>
+&lt;li>h1, Kc1&lt;/li>
+&lt;/ul>
+&lt;!--
+&lt;br>
+&lt;br>
+&lt;iframe
+style="width: 100%; height: 80vh;"
+src="https://lichess.org/study/embed/PrONOirR/bWxo5dlD"
+frameborder="0">
+&lt;/iframe>
+--></description></item></channel></rss>

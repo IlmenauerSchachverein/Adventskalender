@@ -1,0 +1,24 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Schach Adventskalender – Tag 18 - Schachlos</title><link>https://adventskalender.ilmenauer-schachverein.de/2024/18/</link><description>Recent content in Tag 18 - Schachlos on Schach Adventskalender</description><generator>Hugo -- gohugo.io</generator><language>de</language><atom:link href="https://adventskalender.ilmenauer-schachverein.de/2024/18/index.xml" rel="self" type="application/rss+xml"/><item><title>Day 18 - Beispiel</title><link>https://adventskalender.ilmenauer-schachverein.de/2024/18/beispiel/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adventskalender.ilmenauer-schachverein.de/2024/18/beispiel/</guid><description>
+&lt;p>&lt;img src="https://adventskalender.ilmenauer-schachverein.de/day18_beispiel.jpg" alt="Beispiel 18" loading="lazy" />&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>Kd7 Kg4 2. f1=L f6 3. La6 f7 4. Lc8 f8=S#&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>Dies ist Schachmatt, weil der schwarze König keine legalen Züge hat, außer solche, die ein Schachgebot sind!&lt;/li>
+&lt;/ul></description></item><item><title>Tag 18 - Lösung</title><link>https://adventskalender.ilmenauer-schachverein.de/2024/18/loesung/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://adventskalender.ilmenauer-schachverein.de/2024/18/loesung/</guid><description>
+&lt;ul>
+&lt;li>
+&lt;ol>
+&lt;li>Ng8 Bb1 2. c2 h7 3. cxb1=B hxg8=N 4. Be4 Ne7#&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ul>
+&lt;br>
+&lt;br>
+&lt;iframe
+style="width: 100%; height: 80vh;"
+src="https://lichess.org/study/embed/PrONOirR/bWxo5dlD"
+frameborder="0">
+&lt;/iframe></description></item></channel></rss>
