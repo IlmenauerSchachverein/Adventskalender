@@ -1,4 +1,4 @@
-name: Build and Deploy Hugo + Mirror to GitLab
+name: Build and Deploy Hugo to GitHub Pages
 
 on:
   push:
@@ -6,24 +6,20 @@ on:
       - main
   workflow_dispatch:
 
-env:
-  SSHSERVER: ${{ secrets.SSHSERVER }}
-  SSHPW: ${{ secrets.SSHPW }}
-  GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+permissions:
+  contents: write
 
 concurrency:
   group: adventskalender-deploy
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v5
         with:
-          lfs: true
           fetch-depth: 0
 
       - name: Set up Go
@@ -37,75 +33,16 @@ jobs:
           hugo-version: '0.148.1'
           extended: true
 
-      - name: Install Git LFS
-        run: |
-          sudo apt update
-          sudo apt install -y git-lfs
-          git lfs install
-
       - name: Build Hugo Site
         run: |
           hugo mod get
           hugo mod tidy
           hugo --gc --minify --enableGitInfo
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: public
-          path: public/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v5
-        with:
-          name: public
-          path: public
-
-      - name: Install lftp
-        run: |
-          sudo apt update
-          sudo apt install -y lftp
-
-      - name: Upload via SFTP mirror (webuser)
-        run: |
-          lftp -u webuser,"$SSHPW" "sftp://$SSHSERVER" -e '
-            set sftp:auto-confirm yes;
-            set net:max-retries 2;
-            set net:timeout 30;
-            mkdir -p /var/www/adventskalender.ilmenauer-schachverein.de;
-            mirror --reverse --delete --verbose --only-newer --parallel=4 public /var/www/adventskalender.ilmenauer-schachverein.de;
-            bye
-          '
-
-  mirror:
-    needs: deploy
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-
-      - name: Install Git LFS
-        run: |
-          sudo apt update
-          sudo apt install -y git-lfs
-          git lfs install
-
-      - name: Set Git identity
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "info@ilmenauer-schachverein.de"
-
-      - name: Push mirror to GitLab
-        run: |
-          git remote add gitlab "https://oauth2:${GITLAB_TOKEN}@gitlab.erik-skopp.de/ilmenauerschachverein/adventskalender/adventskalender.git"
-          git push gitlab --all
-          git push gitlab --tags
-          git lfs push gitlab --all
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          cname: adventskalender.ilmenauer-schachverein.de
