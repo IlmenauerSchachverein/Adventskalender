@@ -13,12 +13,6 @@ googleAnalytics = "G-6WR8GVTX41"
   contentDir = "content/de"
   languageCode = "de"
   
-  [languages.en]
-  languageName = "Englisch / English"
-  weight = 1
-  title = "Advent of Chess"
-  contentDir = "content/en"
-  languageCode = "en"
 
 [module]
   [[module.imports]]
