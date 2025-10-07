@@ -1,5 +1,5 @@
 ---
-title: Tag 24 - Lösung
+title: Tag 24 - 2024 - Lösung
 toc: false
 type: docs
 ---

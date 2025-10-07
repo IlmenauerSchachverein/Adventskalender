@@ -1,5 +1,5 @@
 ---
-title: Tag 24 - Spielbeweis
+title: Tag 24 - 2024 - Spielbeweis
 toc: false
 type: docs
 weight: 12

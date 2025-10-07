@@ -1,5 +1,5 @@
 ---
-title: Day 18 - Beispiel
+title: Day 18 - 2024 - Beispiel
 toc: false
 type: docs
 weight: 12

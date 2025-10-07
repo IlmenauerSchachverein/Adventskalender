@@ -1,5 +1,5 @@
 ---
-title: Tag 7 - Seriehelppatt
+title: Tag 7 - 2024 - Seriehelppatt
 toc: false
 type: docs
 weight: 7

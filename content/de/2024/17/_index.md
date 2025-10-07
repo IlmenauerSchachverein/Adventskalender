@@ -1,5 +1,5 @@
 ---
-title: Tag 17 - Farbtheorie
+title: Tag 17 - 2024 - Farbtheorie
 toc: false
 type: docs
 weight: 12

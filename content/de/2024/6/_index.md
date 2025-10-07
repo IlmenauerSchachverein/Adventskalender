@@ -1,5 +1,5 @@
 ---
-title: Tag 6 - neuer Quadrant
+title: Tag 6 - 2024 - neuer Quadrant
 toc: false
 type: docs
 weight: 6

@@ -1,5 +1,5 @@
 ---
-title: Tag 18 - Schachlos
+title: Tag 18 - 2024 - Schachlos
 toc: false
 type: docs
 weight: 12

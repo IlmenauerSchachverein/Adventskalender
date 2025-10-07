@@ -1,5 +1,5 @@
 ---
-title: Tag 1 - Stellungsmatt
+title: Tag 1 - 2024 - Stellungsmatt
 toc: false
 type: docs
 weight: 1
