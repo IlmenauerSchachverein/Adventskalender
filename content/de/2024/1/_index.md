@@ -20,4 +20,4 @@ David führt euch zum Kontrollraum der TSK. Auf den Monitoren seht ihr verzerrte
 David nickt. „Wir müssen die TSK stabilisieren, bevor sie kollabiert. Der erste Schritt ist es, diese Stellung nach dem 6. Zug von Weiß zu erreichen.“
 
 
-![Stellung Tag 1](/day1.jpg "rnb1kbnr/ppp1pppp/8/3p1q2/8/5PK1/PPPPP1PP/RNBQ1BNR b kq - 0 1")
+![Stellung Tag 1](/2024/day1.jpg "rnb1kbnr/ppp1pppp/8/3p1q2/8/5PK1/PPPPP1PP/RNBQ1BNR b kq - 0 1")

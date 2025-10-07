@@ -21,5 +21,5 @@ Bevor Santa antworten kann, blinkt eine Warnung auf der Konsole auf. Ein verzerr
 
 „Beginnend mit der Ausgangsposition“, fügt er hinzu, „gib eine Zugfolge an, die diese Stellung nach dem achten Zug von Weiß erreicht (acht Züge für Weiß und sieben für Schwarz).“
 
-![Stellung Tag 16](/day16.jpg "rn2kbnr/p2ppppp/1p6/8/2pP4/5PP1/PP2PB1P/RN2KBNR w KQkq - 0 1")
+![Stellung Tag 16](/2024/day16.jpg "rn2kbnr/p2ppppp/1p6/8/2pP4/5PP1/PP2PB1P/RN2KBNR w KQkq - 0 1")
 

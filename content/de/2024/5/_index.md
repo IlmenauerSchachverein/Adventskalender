@@ -17,4 +17,4 @@ Die Elfen rücken näher, als Carlsen die Stellung auf dem Brett aufbaut. „Es 
 
 Weiß muss einen Bauern hinzufügen und in zwei Zügen mattsetzen. Beachte, dass dies kein Hilfsmatt ist. Weiß muss unabhängig von der Antwort von Schwarz ein Matt erzwingen können. Gib zuerst das Feld an, auf dem der Bauer platziert werden soll, und dann die Zugfolge, die zum Matt in zwei Zügen führt, wobei Weiß beginnt und im zweiten Zug mattsetzt.
 
-![Stellung Tag 5](/day5.jpg "8/5B2/6p1/5N1k/6p1/6R1/4K3/8 w - - 0 1")
+![Stellung Tag 5](/2024/day5.jpg "8/5B2/6p1/5N1k/6p1/6R1/4K3/8 w - - 0 1")

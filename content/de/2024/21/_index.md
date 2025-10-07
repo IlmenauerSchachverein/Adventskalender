@@ -29,5 +29,5 @@ Der Wesley tritt vor, seine Gestalt flackert einen Moment, und seine Stimme trie
 
 Das ist ein schachloses Hilfspatt. Schachs sind nicht erlaubt, sodass, wenn die einzigen legalen Züge in einem normalen Spiel Schachs ohne Matt wären, die Stellung als Patt gilt. Beide Spieler kooperieren. Schwarz zieht zuerst, dann Weiß. Drei Züge für jeden. Der letzte Zug von Weiß muss Patt sein
 
-![Stellung Tag 21](/day21.jpg "8/5kPP/8/3K4/8/8/4p2p/8 b - - 0 1")
+![Stellung Tag 21](/2024/day21.jpg "8/5kPP/8/3K4/8/8/4p2p/8 b - - 0 1")
 

@@ -24,6 +24,6 @@ Dies ist ein Serien-Hilfsmatt. Schwarz führt 9 Züge hintereinander aus, ohne d
 
 Es sind keine Zwischen-Schachs erlaubt, was bedeutet, dass Schwarz erst im 9. Zug Schach geben darf.
 
-![Stellung Tag 12](/day12.jpg "K7/1p6/2k1P3/3NP3/2PP4/5N2/8/8 b - - 0 1")
+![Stellung Tag 12](/2024/day12.jpg "K7/1p6/2k1P3/3NP3/2PP4/5N2/8/8 b - - 0 1")
 
 

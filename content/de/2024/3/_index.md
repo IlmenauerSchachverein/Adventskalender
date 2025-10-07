@@ -24,5 +24,5 @@ In diesem Problem versucht Weiß, ein Matt in 3 Zügen oder weniger zu vermeiden
 
 Gib eine Zugfolge an, bei der Weiß beginnt und nach dem dritten Zug von Weiß nicht mattgesetzt wurde. Hier ist die Stellung auf Lichess. Wir empfehlen, die Züge auf dem Lichess-Analysebrett auszuführen. Wenn es nach dem dritten Zug von Weiß kein Schachmatt ist, hast du die richtige Lösung.
 
-![Stellung Tag 3](/day3.jpg "2k1NRBN/2P1PKpP/P1PPP1Pb/6p1/6p1/8/5p2/8 w - - 0 1")
+![Stellung Tag 3](/2024/day3.jpg "2k1NRBN/2P1PKpP/P1PPP1Pb/6p1/6p1/8/5p2/8 w - - 0 1")
 

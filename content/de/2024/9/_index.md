@@ -24,6 +24,6 @@ David wirft dir einen Blick zu. „Irgendetwas stimmt nicht. Wir müssen da rein
 Geben Sie eine Abfolge von Zügen an, die nach dem 7. Zug von Schwarz zu dieser Stellung führt (7 Züge für Weiß und 7 Züge für Schwarz). 
 
 
-![Stellung Tag 9](/day9.jpg "rn1qkbnr/ppp1pp1p/3p4/8/8/7P/PPPPPP1P/RNBQKb1R w KQkq - 0 1")
+![Stellung Tag 9](/2024/day9.jpg "rn1qkbnr/ppp1pp1p/3p4/8/8/7P/PPPPPP1P/RNBQKb1R w KQkq - 0 1")
 
 

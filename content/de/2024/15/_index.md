@@ -26,5 +26,5 @@ David tauscht einen Blick mit Magnus aus. „Wir tun alles, was wir können. Abe
 Dies ist ein Selbstmatt. Gib die Zugfolge an, die Schwarz zwingt, Weiß im vierten Zug mattzusetzen (beide Spieler machen 4 Züge). Weiß macht den ersten Zug.
 
 
-![Stellung Tag 15](/day15.jpg "8/1p5Q/bP2P3/1p1B2P1/1B6/4kNp1/5pP1/5K2 w - - 0 1")
+![Stellung Tag 15](/2024/day15.jpg "8/1p5Q/bP2P3/1p1B2P1/1B6/4kNp1/5pP1/5K2 w - - 0 1")
 

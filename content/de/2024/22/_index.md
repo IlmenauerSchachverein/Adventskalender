@@ -41,5 +41,5 @@ Grinchuk zieht sich zum Schlitten zurück, lachend, während die Höhle erzitter
 
 Wir wissen nicht, von welcher Seite wir das Brett sehen. Eine Seite kann noch rochieren. Wer ist Weiß?
 
-![Stellung Tag 22](/day22.jpg "versteckt")
+![Stellung Tag 22](/2024/day22.jpg "versteckt")
 

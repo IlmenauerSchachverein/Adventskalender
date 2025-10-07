@@ -20,4 +20,4 @@ Das ist eine Seriehelppatt-Aufgabe. Schwarz führt 9 Züge hintereinander aus, o
 
 Zwischenzeitliche Schachs (Checks) sind nicht erlaubt, das heißt, Schwarz darf nur beim 9. Zug Schach geben. 
 
-![Stellung Tag 7](/day7.jpg "8/1p2k2P/5NK1/8/8/8/8/8 w - - 0 1")
+![Stellung Tag 7](/2024/day7.jpg "8/1p2k2P/5NK1/8/8/8/8/8 w - - 0 1")

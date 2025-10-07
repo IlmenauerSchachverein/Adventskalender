@@ -31,5 +31,5 @@ In der aktuellen Position hat Weiß gerade einen Zug abgeschlossen. Zuerst wird 
 Du musst die zwei zurückgenommenen Halbzüge in der Lösung nicht angeben, sondern nur die zwei Züge, die nach der Rücknahme vorwärts gespielt werden. Zuerst ein Zug von Schwarz, dann ein Zug von Weiß, der Schachmatt setzt. 
 
 
-![Stellung Tag 19](/day19.jpg "8/1p6/1K6/2nNk3/8/8/5n2/8 b - - 0 1")
+![Stellung Tag 19](/2024/day19.jpg "8/1p6/1K6/2nNk3/8/8/5n2/8 b - - 0 1")
 

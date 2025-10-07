@@ -33,5 +33,5 @@ Dies ist ein Hilfsmatt-Problem, was bedeutet, dass beide Seiten zusammenarbeiten
 
 Mit Schwarz am Zug: Wie kann Weiß, mit Unterstützung von Schwarz, im siebten Zug Matt setzen? Schwarz führt 7 Züge aus, Weiß ebenfalls 7, und der siebte Zug von Weiß ist Matt.
 
-![Stellung Tag 23](/day23.jpg "Bk6/bP1p1pPP/1n1P1P2/5p2/6p1/6pb/6p1/6K1 b - - 0 1")
+![Stellung Tag 23](/2024/day23.jpg "Bk6/bP1p1pPP/1n1P1P2/5p2/6p1/6pb/6p1/6K1 b - - 0 1")
 

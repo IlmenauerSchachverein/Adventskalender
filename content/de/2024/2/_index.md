@@ -26,5 +26,5 @@ Dies ist ein Hilfsmatt-Problem, was bedeutet, dass beide Spieler zusammenarbeite
 
 Mit Schwarz am Zug: Wie kann Weiß, mit Hilfe von Schwarz, im dritten Zug mattsetzen? Schwarz spielt 3 Züge und Weiß ebenfalls 3 Züge, wobei der dritte Zug von Weiß das Matt ist.
 
-![Stellung Tag 2](/day2.jpg "8/4N3/3k4/8/2R1n3/8/N5K1/8 b KQkq - 0 1")
+![Stellung Tag 2](/2024/day2.jpg "8/4N3/3k4/8/2R1n3/8/N5K1/8 b KQkq - 0 1")
 

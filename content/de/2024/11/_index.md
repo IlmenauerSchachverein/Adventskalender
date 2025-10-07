@@ -24,6 +24,6 @@ In der aktuellen Stellung hat Weiß gerade einen Zug ausgeführt. Ziehe zuerst d
 
 Du brauchst die beiden zurückgenommenen Halbzüge nicht anzugeben, nur die beiden Züge, die nach der Rücknahme gespielt werden: zuerst ein Zug von Schwarz, dann ein Zug von Weiß, der das Schachmatt liefert.
 
-![Stellung Tag 11](/day11.jpg "2rkQ3/1K6/8/8/8/8/3R1P2/4b3 b - - 0 1")
+![Stellung Tag 11](/2024/day11.jpg "2rkQ3/1K6/8/8/8/8/3R1P2/4b3 b - - 0 1")
 
 

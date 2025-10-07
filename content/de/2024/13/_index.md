@@ -32,4 +32,4 @@ In dieser Stellung darf jede von einer anderen Figur derselben Farbe geschützte
 
 
 
-[def]: /day13.jpg "kB6/P7/P7/3N4/1P1rp3/1B1pP3/1K1P4/8 w - - 0 1"
+[def]: /2024/day13.jpg "kB6/P7/P7/3N4/1P1rp3/1B1pP3/1K1P4/8 w - - 0 1"

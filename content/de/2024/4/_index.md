@@ -16,4 +16,4 @@ Der Monitor flackert und zeigt eine Schachstellung. David deutet darauf. „Wir 
 Dies ist ein Selbstmatt. Gib die Zugfolge an, die Schwarz dazu zwingt, Weiß im zweiten Zug Matt zu setzen (sowohl Weiß als auch Schwarz machen jeweils 2 Züge). Weiß beginnt. Beachte, dass Schwarz versucht, das Matt zu vermeiden, aber keine andere Möglichkeit hat.
 
 
-![Stellung Tag 4](/day4.jpg "Q5bk/6b1/5B2/8/8/8/8/KB6 w - - 0 1")
+![Stellung Tag 4](/2024/day4.jpg "Q5bk/6b1/5B2/8/8/8/8/KB6 w - - 0 1")

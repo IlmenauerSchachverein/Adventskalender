@@ -29,4 +29,4 @@ Beispiel: Wenn eine Dame auf b2 nach a3 gezogen ist, schreibst du Db2-a3. Wenn e
 
 
 
-[def]: /day14.jpg "3bkN1K/pppprp1p/4p1p1/8/8/8/8/8 w - - 0 1"
+[def]: /2024/day14.jpg "3bkN1K/pppprp1p/4p1p1/8/8/8/8/8 w - - 0 1"

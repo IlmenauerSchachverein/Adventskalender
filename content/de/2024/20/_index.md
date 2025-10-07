@@ -33,5 +33,5 @@ Beispiel: e8, Ta1
    Leider lässt sich in ChessBase 16 nur eine gültige Stellung aufbauen, weshalb das Bild aus Lichess stammt. Die FEN ist dennoch korrekt.
 {{< /callout >}}
 
-![Stellung Tag 20](/day20.jpg "2b5/8/2r1p3/4Bp2/1p1P4/2b1N3/2QPN3/R2K4 w - - 0 1")
+![Stellung Tag 20](/2024/day20.jpg "2b5/8/2r1p3/4Bp2/1p1P4/2b1N3/2QPN3/R2K4 w - - 0 1")
 
