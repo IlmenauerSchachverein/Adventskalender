@@ -34,10 +34,7 @@ type: docs
 {{< card link="2025/epilog" title="Epilog" icon="star" >}}
 {{< /cards >}}
 
-
-
-
-
+<hr />
 
 # 2024
 
