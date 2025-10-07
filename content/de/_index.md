@@ -4,6 +4,36 @@ toc: false
 type: docs
 ---
 
+# 2025
+
+{{< cards >}}
+{{< card link="2025/1" title="Tag 1" icon="star" >}}
+{{< card link="2025/2" title="Tag 2" icon="star" >}}
+{{< card link="2025/3" title="Tag 3" icon="star" >}}
+{{< card link="2025/4" title="Tag 4" icon="star" >}}
+{{< card link="2025/5" title="Tag 5" icon="star" >}}
+{{< card link="2025/6" title="Tag 6" icon="star" >}}
+{{< card link="2025/7" title="Tag 7" icon="star" tag="Zweiter Advent" >}}
+{{< card link="2025/8" title="Tag 8" icon="star" >}}
+{{< card link="2025/9" title="Tag 9" icon="star" >}}
+{{< card link="2025/10" title="Tag 10" icon="star" >}}
+{{< card link="2025/11" title="Tag 11" icon="star" >}}
+{{< card link="2025/12" title="Tag 12" icon="star" >}}
+{{< card link="2025/13" title="Tag 13" icon="star" >}}
+{{< card link="2025/14" title="Tag 14" icon="star" tag="Dritter Advent"  >}}
+{{< card link="2025/15" title="Tag 15" icon="star" >}}
+{{< card link="2025/16" title="Tag 16" icon="star" >}}
+{{< card link="2025/17" title="Tag 17" icon="star" >}}
+{{< card link="2025/18" title="Tag 18" icon="star" >}}
+{{< card link="2025/19" title="Tag 19" icon="star" >}}
+{{< card link="2025/20" title="Tag 20" icon="star" >}}
+{{< card link="2025/21" title="Tag 21" icon="star" tag="Vierter Advent"  >}}
+{{< card link="2025/22" title="Tag 22" icon="star" >}}
+{{< card link="2025/23" title="Tag 23" icon="star"  >}}
+{{< card link="2025/24" title="Tag 24" icon="star" tag="Heilig Abend"  >}}
+{{< card link="2025/epilog" title="Epilog" icon="star" >}}
+{{< /cards >}}
+
 # 2024
 
 {{< cards >}}
