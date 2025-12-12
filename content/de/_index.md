@@ -3,6 +3,15 @@ title: Schach Adventskalender
 toc: false
 type: docs
 ---
+{{< callout type="error" >}}
+
+**DE:** Aufgrund mangelnden Interesses wird 2025 und in den Folgejahren kein Adventskalender mehr geführt.  
+**EN:** Due to lack of interest, there will be no Advent calendar in 2025 or in the years thereafter.
+
+{{< /callout >}}
+
+
+
 
 {{< cards >}}
 {{< card link="2024/1" title="Tag 1" icon="star" tag="Erster Advent" >}}
