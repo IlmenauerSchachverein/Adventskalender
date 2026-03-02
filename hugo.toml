@@ -3,8 +3,6 @@ baseURL = "https://adventskalender.ilmenauer-schachverein.de"
 
 defaultContentLanguage = 'de'
 
-googleAnalytics = "G-6WR8GVTX41"
-
 [languages]
   [languages.de]
   languageName = "German / Deutsch"
